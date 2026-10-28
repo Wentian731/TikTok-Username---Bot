@@ -1,7 +1,7 @@
 import os
 import telebot
 
-TOKEN = os.getenv('BOT_TOKEN', '9211513762:AAHAxYvMzSuIUT50hT8UxKK4g1hvoea2laI')
+TOKEN = os.getenv('BOT_TOKEN', 'YOUR_BOT_TOKEN_HERE')
 bot = telebot.TeleBot(TOKEN)
 
 global_messages_memory = set()
@@ -22,4 +22,5 @@ def check_and_reply(message):
 
 if __name__ == "__main__":
     print("Bot is running...")
+    bot.remove_webhook()
     bot.infinity_polling()
